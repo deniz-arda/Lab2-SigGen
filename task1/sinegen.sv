@@ -20,7 +20,10 @@ counter addrCounter (
     .count (address)
 );
 
-rom sineRom (
+rom #(
+    .ADDRESS_WIDTH(A_WIDTH),
+    .DATA_WIDTH(D_WIDTH)
+) sineRom(
     .clk (clk),
     .addr (address),
     .dout (dout)
